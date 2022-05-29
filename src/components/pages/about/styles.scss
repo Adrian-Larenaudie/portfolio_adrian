@@ -1,0 +1,91 @@
+/* Home page main styles */
+@import '../../../styles/vars';
+.about {
+  margin-left: 20%;
+  width: 80%;
+  display: flex;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 5%;
+  &__someWordsContainer {
+    position: relative;
+    padding: 2rem;
+    width: 60%;
+    height: fit-content;
+    &__title {
+      font-size: 4rem;
+    }
+    &__text {
+      margin-top: 4rem;
+      font-size: 1.5rem;
+      span {
+        display: block;
+        visibility: hidden;
+      }
+    }
+    &__link {
+      transition: $fastTransition;
+      color: $darkGreen;
+      &:hover {
+        transition: $fastTransition;
+        color: $darkHover;
+      }
+    }
+  }
+  &__cvCardContainer {
+    position: relative;
+    width: 40%;
+    text-align: center;
+    align-self: center;
+    &__cvCard {
+      margin: auto;
+      width: 250px;
+      height: 354px;
+      &__innerCard {
+        border: 3px solid $darkText;
+        transition: $fastTransition;
+      }
+      &Front {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}
+
+/* Responsive part */
+@media screen and (max-width: 1440px) {
+  .about {
+    margin-top: 0;
+    &__someWordsContainer {
+      width: 80%;
+      &__title {
+        font-size: 3rem;
+      }
+      &__text {
+        margin-top: 2rem;
+        font-size: 1rem;
+      }
+    }
+    &__cvCardContainer {
+      margin-top: 1rem;
+      margin-bottom: 2rem;
+      width: 100%;
+      &__cvCard {
+        width: 200px;
+        height: 283px;
+        margin-left: 2rem;
+      }
+     
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .about {
+    .pageBackground {
+      display: none;
+    }
+  }
+}

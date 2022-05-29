@@ -1,0 +1,79 @@
+/* Skills page main styles */
+@import '../../../styles/vars';
+.contact {
+  margin-left: 20%;
+  width:  80%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  &__title {
+    position: relative;
+    width: 100%;
+    font-size: 4rem;
+    padding: 2rem;
+  }
+  &__form {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    width: 60%;
+    padding: 2rem;
+  }
+  &__message {
+    width: 100%;
+    margin-bottom: 2rem;
+    background-color: $darkTextBackground;
+    border: none;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+    resize: none;
+  }
+  &__userEmail {
+    width: 80%;
+    margin-bottom: 2rem;
+    background-color: $darkTextBackground;
+    border: none;
+    padding: 2rem;
+    font-size: 1.5rem;
+    color: #ffffff;
+  }
+  &__submit {
+    width: 200px;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+    padding: 1rem 2rem;
+    color: $darkBackground;
+    background-color: $darkGreen;
+    font-weight: 900;
+    border: none;
+    font-style: italic;
+    &:hover {
+      background-color: $darkHover;
+    }
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .contact {
+    .pageBackground {
+      display: none;
+    }
+    &__title {
+      font-size: 3rem;
+    }
+    &__form {
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .contact {
+    &__form {
+      width: 100%;
+    }
+  }
+}
+

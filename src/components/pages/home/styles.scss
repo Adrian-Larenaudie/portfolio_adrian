@@ -1,0 +1,52 @@
+/* Home page main styles */
+@import '../../../styles/vars';
+.home {
+  margin-left: 20%;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  &__title {
+    position: relative;
+    padding: 0 1rem;
+    margin-top: 10rem;
+    font-size: 4rem;
+  }
+  &__subtitle {
+    position: relative;
+    padding: 0 1rem;
+    margin-top: 3rem;
+    font-size: 3rem;
+  }
+  &__dynamicWords {
+    position: relative;
+    margin-top: .5rem;
+    padding: 0 1rem;
+    font-size: 3rem;
+    color: $darkGreen;
+  }
+}
+
+/* Responsive part */
+@media screen and (max-width: 1300px) {
+  .home {
+    &__title {
+      margin-top: 8rem;
+      font-size: 3rem;
+    }
+    &__subtitle {
+      font-size: 2rem;
+    }
+    &__dynamicWords {
+      font-size: 2rem;
+      color: $darkGreen;
+    }
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .home {
+    .pageBackground {
+      display: none;
+    }
+  }
+}

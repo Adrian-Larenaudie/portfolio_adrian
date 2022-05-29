@@ -1,0 +1,39 @@
+/* NotFound page main styles */
+@import '../../../styles/vars';
+
+.notFound {
+  position: relative;
+  margin: 10rem;
+  margin-left: 20%;
+  width: 80%;
+  border: 5px solid $darkText;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    font-size: 7rem;
+    margin-bottom: 2rem;
+  }
+  &__subtitle {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  &__text {
+    margin-bottom: 2rem;
+  }
+  &__link {
+    margin-bottom: 2rem;
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: $darkBackground;
+    background-color: $darkGreen;
+    font-weight: 900;
+    border: none;
+    font-style: italic;
+    &:hover {
+      background-color: $darkHover;
+    }
+  }
+}

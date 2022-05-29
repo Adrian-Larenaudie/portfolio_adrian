@@ -1,0 +1,33 @@
+@use 'reset';
+@import './vars.scss';
+
+@font-face {
+  font-family: 'Jet Brains Mono';
+  src: url('../assets/fonts/JetBrainsMono-Bold.ttf') format('truetype');
+  src: url('../assets/fonts/JetBrainsMono-ExtraBold.ttf') format('truetype');
+  src: url('../assets/fonts/JetBrainsMono-ExtraLight.ttf') format('truetype');
+  src: url('../assets/fonts/JetBrainsMono-Light.ttf') format('truetype');
+}
+
+body {
+  font-family: 'Jet Brains Mono', sans-serif;
+  button {
+    font-family: 'Jet Brains Mono', sans-serif;
+  }
+}
+
+body::-webkit-scrollbar {
+  width: 5px;
+}
+
+body::-webkit-scrollbar-track {
+  background: $darkBackground;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: grey;
+  border-radius: 20px;
+  border: 1px solid grey;
+}
+
+

@@ -1,0 +1,42 @@
+/* App component main styles */
+@import '../../styles/_vars.scss';
+@import '../../styles/themeLight.scss';
+.app {
+  transition: $slowTransition;
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  color: $darkText;
+  background-color: $darkBackground;
+  span {
+    color: $darkGreen;
+  }
+}
+
+.pageBackground {
+  letter-spacing: -1.7rem;
+  position: absolute;
+  text-transform: uppercase;
+  color: $darkTextBackground;
+  font-size: 20rem;
+  font-weight: 900;
+  bottom: 3.2rem;
+  right: 4rem;
+}
+
+.pageBackground--rotate {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 15rem;
+  top: 2rem;
+  right: 15rem;
+  letter-spacing: -1.7rem;
+}
+
+.pageBackground--rotate--notFound {
+  top: 12rem;
+}
+
+.pageBackground--rotate--thanks {
+  top: 8rem;
+}

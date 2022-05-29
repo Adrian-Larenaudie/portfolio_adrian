@@ -1,0 +1,34 @@
+/* All about's page animations */
+
+/* cv card flip animation */
+.about {
+  img {
+    height: 100%;
+    width: 100%;
+  }
+  .about__cvCardContainer__cvCard {
+    perspective: 1000px;
+    &__innerCard {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      text-align: center;
+      transition: transform .5s;
+      transform-style: preserve-3d;
+    }
+    &Front, &Back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      -webkit-backface-visibility: hidden; /* Safari */
+      backface-visibility: hidden;
+    }
+    &Back {
+      transform: rotateY(180deg);
+    }
+  } 
+  .about__cvCardContainer__cvCard:hover .about__cvCardContainer__cvCard__innerCard {
+    transform: rotateY(180deg);
+  }
+}
+

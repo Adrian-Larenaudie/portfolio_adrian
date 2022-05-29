@@ -1,0 +1,135 @@
+/* Apply colors for theme light when its active */
+@import './_vars.scss';
+.app--light {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  transition: $slowTransition;
+  font-weight: 700;
+  color: $lightText;
+  background-color: $lightBackground;
+  span {
+    color: #fff;
+  }
+  .pageBackground {
+    color: $ligthTextBackground;
+  }
+  /* NAVIGATION PART */
+  .nav {
+    .active:before {
+      background-color: $lightText;
+    }
+    &__link {
+      &:before {
+      border-color: $lightText;
+      }
+      &:hover {
+        color: $lightHover;
+        &:before {
+          border-color: $lightHover;
+          background-color: $lightHover;
+        }
+      }
+    }
+    &__social {
+      svg {
+        fill: $lightText;
+        &:hover {
+          fill: $lightHover;
+        }
+      }
+    }
+  }
+  /* HOME PART */
+  .home__dynamicWords {
+    color: #fff;
+  }
+  /* ABOUT PART */
+  .about__someWordsContainer__link {
+    color: #fff;
+    &:hover {
+      color: $lightHover;
+    }
+  }
+  .about__cvCardContainer__cvCard__innerCard {
+    border-color: $lightText;
+  }
+  /* SKILLS PART */
+  .skills {
+    &__techContainer {
+      &__technos {
+        .techSvg {
+          svg {
+            fill: $lightText;
+            path {
+              fill: $lightText;
+            }
+            circle {
+              fill: #fff;
+            }
+          }
+        }
+      }
+    }
+    &__trainingContainer {
+      &__panel {
+        border-color: $lightText;
+      }
+      &__text {
+        a {
+          color: #fff;
+          &:hover {
+            color: $lightHover;
+          }
+        }
+      }
+    }
+  }
+  /* MYWORKS PART */
+  .works {
+    &__repoCard {
+      border-color: $lightText;
+      &:hover {
+        border-color: #fff;
+        color: #fff;
+      }
+    }
+  }
+  /* CONTACT PART */
+  .contact {
+    &__message {
+      background-color: $ligthTextBackground;
+      color: $lightText;
+      font-weight: 900;
+      &::placeholder {
+        color: $lightText;
+      }
+    }
+    &__userEmail {
+      background-color: $ligthTextBackground;
+      color: $lightText;
+      font-weight: 600;
+      &::placeholder {
+        color: $lightText;
+      }
+    }
+    &__submit {
+      background-color: #fff;
+      &:hover {
+        color: $lightBackground;
+        background-color: $lightText;
+      }
+    }
+  }
+  /* NOTFOUND PART & THANKS PART */
+  .notFound, .thanks {
+    border-color: #fff;
+    &__link {
+      background-color: #fff;
+      &:hover {
+        color: $lightBackground;
+        background-color: $lightText;
+      }
+    }
+  }
+}

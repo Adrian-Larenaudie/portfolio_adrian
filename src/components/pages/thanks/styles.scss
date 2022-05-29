@@ -1,0 +1,75 @@
+/* Thanks page main styles */
+@import '../../../styles/vars';
+
+.thanks {
+  position: relative;
+  margin: auto;
+  width: 70%;
+  padding: 5rem;
+  border: 5px solid $darkText;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  &__title {
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  &__link {
+    margin-bottom: 2rem;
+    width: fit-content;
+    padding: 1rem 2rem;
+    font-size: 1.5rem;
+    color: $darkBackground;
+    background-color: $darkGreen;
+    font-weight: 900;
+    border: none;
+    font-style: italic;
+    &:hover {
+      background-color: $darkHover;
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .thanks {
+    &__title {
+      font-size: 3rem;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .thanks {
+    &__title {
+      font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .thanks {
+    padding: 5rem 2rem;
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .thanks {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width: 470px) {
+  .thanks {
+    &__link {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-height: 850px) {
+  .pageBackground--rotate--thanks {
+    font-size: 2rem;
+  }
+}
