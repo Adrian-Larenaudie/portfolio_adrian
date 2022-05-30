@@ -64,8 +64,23 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 768px) {
   .theme {
     font-size: .7rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .theme {
+    right: auto;
+    left: 1rem;
+  }
+}
+
+@media screen and (max-width: 614px) {
+  .theme {
+    top: 0;
+    right: 0;
+    left: auto;
   }
 }

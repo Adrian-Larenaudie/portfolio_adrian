@@ -77,3 +77,25 @@
   }
 }
 
+@media screen and (max-width: 614px) {
+  .contact {
+    margin: 1rem;
+    margin-top: 4rem;
+    width: 100%;
+    padding: 0;
+    &__form {
+      padding: 0;
+      margin-top: 2rem;
+    }
+    &__title {
+      padding: 0;
+      font-size: 2rem;
+    }
+    &__userEmail {
+      width: 100%;
+    }
+    &__submit {
+      width: 100%;
+    }
+  }
+}

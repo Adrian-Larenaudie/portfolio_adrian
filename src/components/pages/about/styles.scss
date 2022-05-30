@@ -89,3 +89,19 @@
     }
   }
 }
+
+@media screen and (max-width: 614px) {
+  .about {
+    margin: 0;
+    margin-top: 2rem;
+    width: 100%;
+    &__someWordsContainer {
+      width: 100%;
+      margin-top: 2.5rem;
+      padding-top: 0;
+      &__title {
+        font-size: 2rem;
+      }
+    }
+  }
+}

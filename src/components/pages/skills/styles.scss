@@ -169,3 +169,48 @@
   }
 }
 
+@media screen and (max-width: 614px) {
+  .skills {
+    &__trainingContainer__panel {
+      &__text {
+        font-size: 1rem;
+      }
+    } 
+  }
+}
+
+@media screen and (max-width: 614px) {
+  .skills {
+    margin: 1rem;
+    width: 100%;
+    padding: 0;
+    &__techContainer {
+      padding: 0;
+      width: 100%;
+      margin-top: 4rem;
+      &__technos {
+        margin: 2rem;
+      }
+      &__title {
+        font-size: 2rem;
+        text-align: left;
+      }
+    }
+    &__trainingContainer {
+      &__panel {
+        margin: 1rem 0;
+        width: 100%;
+      }
+      &__text {
+        text-align: center;
+        font-size: 1rem;
+      }
+    } 
+    &__softSkillsContainer {
+      &__title {
+        font-size: 2rem;
+      }
+    }
+  }
+}
+

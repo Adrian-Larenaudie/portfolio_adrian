@@ -57,6 +57,10 @@
 @media screen and (max-width: 770px) {
   .thanks {
     width: 90%;
+    padding: 3rem 1rem;
+    &__link {
+      
+    }
   }
 }
 
@@ -68,8 +72,3 @@
   }
 }
 
-@media screen and (max-height: 850px) {
-  .pageBackground--rotate--thanks {
-    font-size: 2rem;
-  }
-}

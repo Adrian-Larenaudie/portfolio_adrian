@@ -17,6 +17,8 @@
   }
   /* NAVIGATION PART */
   .nav {
+    transition: $slowTransition;
+    background-color: $lightBackground;
     .active:before {
       background-color: $lightText;
     }

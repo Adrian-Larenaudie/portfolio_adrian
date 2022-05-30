@@ -2,6 +2,7 @@
 @import '../../../styles/vars';
 
 .notFound {
+  padding: 1rem;
   position: relative;
   margin: 10rem;
   margin-left: 20%;
@@ -34,6 +35,31 @@
     font-style: italic;
     &:hover {
       background-color: $darkHover;
+    }
+  }
+}
+
+@media screen and (max-width: 770px) {
+  .notFound {
+    margin: auto;
+    width: 90%;
+    padding-bottom: 3rem;
+    &__link {
+      font-size: 1rem;
+    }
+  }
+}
+
+@media screen and (max-width: 488px) {
+  .pageBackground--rotate--notFound {
+    display: none;
+  }
+  .notFound {
+    &__subtitle {
+      font-size: 2rem;
+    }
+    &__link {
+      padding: 1rem 1rem;
     }
   }
 }
