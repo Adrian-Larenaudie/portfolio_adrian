@@ -30,14 +30,31 @@
           fill: $darkText;
           height: 45px;
           width:  45px;
+          transition: $slowTransition;
           path {
+            transition: $slowTransition;
             fill: $darkText;
           }
           circle {
+            transition: $slowTransition;
             fill: $darkGreen;
           }
+        }
+        p {
+          transition: $slowTransition;
+        }
+        &:hover {
           p {
-            text-align: center;
+            transition: 0s;
+            color: $darkGreen;
+          }
+          path {
+            transition: 0s;
+            fill: $darkGreen;
+          }
+          circle {
+            transition: 0s;
+            fill: $darkText;
           }
         }
       }

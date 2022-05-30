@@ -1,3 +1,4 @@
+/* Theme component styles */
 @import '../../styles/_vars.scss';
 
 .theme {
@@ -54,4 +55,17 @@
 			transition: all $fastTransition ease-out;
 		}
 	}
+}
+
+/* Responsive part */
+@media screen and (max-width: 1100px) {
+  .theme {
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .theme {
+    font-size: .7rem;
+  }
 }

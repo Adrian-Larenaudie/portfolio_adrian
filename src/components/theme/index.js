@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+import Fade from 'react-reveal/Fade';
 import './styles.scss';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeIsLoadingStatus } from '../../actions';
@@ -12,13 +13,15 @@ const Theme = () => {
   };
   return (
     <div className="theme">
-      <div className="theme__switcher">
-        <input checked={!isDarkTheme} onChange={handleChange} type="checkbox" id="input" />
-        <label htmlFor="input">Theme {isDarkTheme ? 'Light' : 'Dark'}</label>
-        <label className="label" htmlFor="input">
-          <span className="slider-check" />
-        </label>
-      </div>
+      <Fade delay={1500} duration={1000}>
+        <div className="theme__switcher">
+          <input checked={!isDarkTheme} onChange={handleChange} type="checkbox" id="input" />
+          <label htmlFor="input">Theme {isDarkTheme ? 'Light' : 'Dark'}</label>
+          <label className="label" htmlFor="input">
+            <span className="slider-check" />
+          </label>
+        </div>
+      </Fade>
     </div>
   );
 };

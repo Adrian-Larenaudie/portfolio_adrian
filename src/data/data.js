@@ -10,7 +10,6 @@ const data = {
     'rigueur   ',
     'dynamisme  ',
     'curiosité    ',
-    'aimabilité    ',
     'disponibilité ',
     'persévérance  ',
     'écoute       ',

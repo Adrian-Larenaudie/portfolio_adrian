@@ -1,4 +1,7 @@
 import { useEffect } from 'react';
+import SquareLoader from 'react-spinners/SquareLoader';
+import { css } from '@emotion/react';
+import Fade from 'react-reveal/Fade';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGithubRepos } from '../../../actions';
 import './styles.scss';
@@ -8,7 +11,6 @@ const Works = () => {
   const dispatch = useDispatch();
   // get githubRepos value from the state
   const githubRepos = useSelector((state) => state.githubRepos);
-  console.log(githubRepos);
   // get isLoadingGithubRepos value from the state
   const isLoadingGithubRepos = useSelector((state) => state.isLoadingGithubRepos);
   useEffect(() => {
@@ -19,26 +21,43 @@ const Works = () => {
     }
   }, []);
 
+  // https://www.davidhu.io/react-spinners/ using a spinner to manage loading API
+  const theme = useSelector((state) => state.isDarkTheme);
+  const override = css`
+  display: block;
+  margin: 0 auto;
+  background-color: ${theme ? '#66ff66' : '#fff'};`;
+
   // Inside the returned JSX a loading page is displayed while retrieving data from API
   return (
     <div className="works" id="works">
-      <h1 className="pageBackground">works</h1>
-      {isLoadingGithubRepos && <> <h1 style={{ fontSize: '8rem' }}>CHARGEMENT DES REPOS</h1> </> }
+      {isLoadingGithubRepos && (
+        <div className="works__loader">
+          <SquareLoader loading css={override} size={50} />
+          <h1 className="works__loader__title">Chargement...</h1>
+        </div>
+      )}
       {!isLoadingGithubRepos && githubRepos[0] !== undefined && (
       <>
-        <h1 className="works__title">Mes
-          <span> réalisations</span>
-        </h1>
+        <Fade duration={1000} delay={200} left distance="30%">
+          <h1 className="pageBackground">works</h1>
+        </Fade>
+        <Fade duration={1000} delay={200} right distance="10%">
+          <h1 className="works__title">Mes
+            <span> réalisations</span>
+          </h1>
+        </Fade>
         <div className="works__reposContainer">
           {githubRepos.map((repo) => (
-            <a
-              key={repo.id}
-              className="works__repoCard"
-              href={repo.html_url}
-              target="_blank"
-              rel="noreferrer"
-            >{repo.name}
-            </a>
+            <Fade key={repo.id} duration={1000} delay={500}>
+              <a
+                className="works__repoCard"
+                href={repo.html_url}
+                target="_blank"
+                rel="noreferrer"
+              >{repo.name}
+              </a>
+            </Fade>
           ))}
         </div>
       </>

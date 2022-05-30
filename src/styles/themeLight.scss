@@ -1,6 +1,7 @@
 /* Apply colors for theme light when its active */
 @import './_vars.scss';
 .app--light {
+  overflow-x: hidden;
   display: flex;
   width: 100%;
   min-height: 100vh;
@@ -66,6 +67,20 @@
             }
             circle {
               fill: #fff;
+            }
+          }
+          &:hover {
+            p {
+              transition: 0s;
+              color: #fff;
+            }
+            path {
+              transition: 0s;
+              fill: #fff;
+            }
+            circle {
+              transition: 0s;
+              fill: $lightText;
             }
           }
         }
