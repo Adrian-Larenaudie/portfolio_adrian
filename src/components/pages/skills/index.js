@@ -1,4 +1,5 @@
 import './styles.scss';
+import './animations.scss';
 import Fade from 'react-reveal/Fade';
 // eslint-disable-next-line import/no-unresolved
 import Redux from '../../svg/technos/Redux';
@@ -14,19 +15,23 @@ import React from '../../svg/technos/React';
 import Sass from '../../svg/technos/Sass';
 
 const Skills = () => {
-  console.log('ici c\'est la skills page');
+  console.log('');
   return (
     <div className="skills" id="skills">
+
       <Fade duration={1000} delay={1000} left distance="20%">
         <h1 className="pageBackground">skills</h1>
       </Fade>
+
       <div className="skills__techContainer">
+
         <Fade duration={800} delay={200} left distance="10%">
           <h1 className="skills__techContainer__title">
             Je travaille
             <span> avec</span>
           </h1>
         </Fade>
+
         <div className="skills__techContainer__technos">
           <Fade duration={1000} delay={1200}><GitIcon /></Fade>
           <Fade duration={800} delay={800}><GitHub /></Fade>
@@ -40,7 +45,9 @@ const Skills = () => {
           <Fade duration={800} delay={800}><React /></Fade>
           <Fade duration={1000} delay={1200}><Redux /></Fade>
         </div>
+
       </div>
+
       <Fade duration={700} delay={800} top distance="20%">
         <div className="skills__trainingContainer">
           <div className="skills__trainingContainer__panel">
@@ -57,13 +64,16 @@ const Skills = () => {
           </div>
         </div>
       </Fade>
+
       <div className="skills__softSkillsContainer">
+
         <Fade duration={400} delay={700} top distance="25%">
           <h1 className="skills__softSkillsContainer__title">
             Soft
             <span> skills</span>
           </h1>
         </Fade>
+
         <ul className="skills__softSkillsContainer__liste">
           <Fade duration={400} delay={200} right distance="25%"><li className="skills__softSkillsContainer__liste__item">Organisation</li></Fade>
           <Fade duration={400} delay={300} right distance="25%"><li className="skills__softSkillsContainer__liste__item">Communication</li></Fade>
@@ -71,6 +81,7 @@ const Skills = () => {
           <Fade duration={400} delay={500} right distance="25%"><li className="skills__softSkillsContainer__liste__item">Gestion du stress</li></Fade>
           <Fade duration={400} delay={600} right distance="25%"><li className="skills__softSkillsContainer__liste__item">Résolution de problème</li></Fade>
         </ul>
+
       </div>
     </div>
   );

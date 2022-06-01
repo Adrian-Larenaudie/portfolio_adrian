@@ -3,7 +3,7 @@
 .nav {
   transition: $slowTransition;
   background-color: $darkBackground;
-  z-index: 42;
+  z-index: calc(42 + 42);
   position: fixed;
   width: 20%;
   height: 100vh;

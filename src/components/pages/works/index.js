@@ -5,8 +5,15 @@ import Fade from 'react-reveal/Fade';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchGithubRepos } from '../../../actions';
 import './styles.scss';
+import './animations.scss';
 
 const Works = () => {
+  // To dispatch a valid z-index on repoCard element
+  const dispatchZindex = () => {
+    const repoCards = document.querySelectorAll('.works__repoCard__top');
+    console.log(repoCards);
+  };
+
   // store dispatch hook in const (hooks can only be called inside the body of the function)
   const dispatch = useDispatch();
   // get githubRepos value from the state
@@ -19,9 +26,11 @@ const Works = () => {
       // if not fetch data from github API
       dispatch(fetchGithubRepos());
     }
+    dispatchZindex();
   }, []);
 
   // https://www.davidhu.io/react-spinners/ using a spinner to manage loading API
+  // To set spinner properties I get isDarkTheme boolean value from the state
   const theme = useSelector((state) => state.isDarkTheme);
   const override = css`
   display: block;
@@ -47,17 +56,23 @@ const Works = () => {
             <span> réalisations</span>
           </h1>
         </Fade>
+
         <div className="works__reposContainer">
           {githubRepos.map((repo) => (
-            <Fade key={repo.id} duration={1000} delay={500}>
-              <a
-                className="works__repoCard"
-                href={repo.html_url}
-                target="_blank"
-                rel="noreferrer"
-              >{repo.name}
-              </a>
-            </Fade>
+            <div key={repo.id} id={repo.id} className="works__repoCard">
+              <div className="works__repoCard__top">
+                <p>{repo.name}</p>
+              </div>
+              <div className="works__repoCard__under">
+                <a
+                  key={repo.id}
+                  href={repo.html_url}
+                  target="_blank"
+                  rel="noreferrer"
+                >Voir sur GitHub
+                </a>
+              </div>
+            </div>
           ))}
         </div>
       </>

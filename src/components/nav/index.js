@@ -23,7 +23,6 @@ const Nav = () => {
       <Fade delay={1000} duration={1000}>
         <div className="nav__logo">
           <span>al</span>
-
         </div>
 
         <nav className="nav__pages">
@@ -45,6 +44,7 @@ const Nav = () => {
         </nav>
 
       </Fade>
+
     </div>
   );
 };

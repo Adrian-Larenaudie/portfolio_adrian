@@ -53,6 +53,24 @@
       background-color: $darkHover;
     }
   }
+  &__nav__socials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  &__nav__social {
+    margin: 1rem;
+    svg {
+      fill: $darkText;
+      height: 40px;
+      width: 40px;
+      &:hover {
+        transition: $fastTransition;
+        fill: $darkHover;
+      }
+    }
+  }
 }
 
 @media screen and (max-width: 1440px) {

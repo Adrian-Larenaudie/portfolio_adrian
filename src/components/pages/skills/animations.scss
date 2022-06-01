@@ -1,0 +1,9 @@
+/* Skills page animations */
+
+/* Rotate tech svg on hover */
+
+
+.techSvg:hover {
+  transition: .5s;
+  transform: rotateY(45deg);
+}

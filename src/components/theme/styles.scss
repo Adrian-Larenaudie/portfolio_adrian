@@ -3,7 +3,7 @@
 
 .theme {
   background-color: inherit;
-  z-index: 43;
+  z-index: calc(42 + 42 + 42);
   position: fixed;
   right: .5rem;
   top: .5rem;

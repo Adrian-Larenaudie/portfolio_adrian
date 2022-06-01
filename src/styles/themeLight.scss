@@ -106,9 +106,16 @@
   .works {
     &__repoCard {
       border-color: $lightText;
-      &:hover {
-        border-color: #fff;
-        color: #fff;
+      &__under, &__top {
+        border-color: $lightText;
+        background-color: $lightBackground;
+      }
+      &:hover .works__repoCard__under, &:hover .works__repoCard__top {
+        color: $lightText;
+        border-color: $lightText;
+        a:hover {
+          color: $lightHover;
+        }
       }
     }
   }
@@ -135,6 +142,15 @@
       &:hover {
         color: $lightBackground;
         background-color: $lightText;
+      }
+    }
+    &__nav__social {
+      margin: 1rem;
+      svg {
+        fill: $lightText;
+        &:hover {
+          fill: $lightHover;
+        }
       }
     }
   }

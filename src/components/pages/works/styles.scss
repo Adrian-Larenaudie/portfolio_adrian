@@ -34,15 +34,14 @@
     margin: auto;
   }
   &__repoCard {
-    margin: 1rem;
-    padding: 2rem;
-    border: 3px solid $darkText;
+    z-index: 42;
+    background-color: $darkBackground;
+    position: relative;
+    margin: 1.2rem;
     font-size: 1.5rem;
     transition: $fastTransition;
     &:hover {
       transition: $fastTransition;
-      color: $darkGreen;
-      border-color: $darkGreen;
     }
   }
 }
@@ -57,9 +56,6 @@
       font-size: 3rem;
     }
     &__repoCard {
-      margin: .7rem;
-      padding: 1.5rem;
-      font-size: 1rem;
       transition: $fastTransition;
     }
   }
@@ -72,6 +68,16 @@
     }
     &__reposContainer {
       justify-content: center; 
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .works {
+    &__repoCard {
+      font-size: 1rem;
+      text-align: center;
+     width: 80%;
     }
   }
 }
