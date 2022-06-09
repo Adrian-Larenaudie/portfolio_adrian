@@ -32,6 +32,9 @@
 /* Responsive part */
 @media screen and (max-width: 1300px) {
   .home {
+    .pageBackground {
+      font-size: 15rem;
+    }
     &__title {
       margin-top: 8rem;
       font-size: 3rem;
@@ -56,10 +59,18 @@
 
 @media screen and (max-width: 614px) {
   .home {
+    justify-content: center;
     margin: 1rem;
     width: 100%;
     &__title {
-      margin-top: 4rem;
+      margin-top: 0;
+      font-size: 2.5rem;
+    }
+    &__subtitle {
+      font-size: 1.5rem;
+    }
+    &__dynamicWords {
+      font-size: 1.5rem;
     }
   }
 }

@@ -63,13 +63,18 @@ const Works = () => {
               <div className="works__repoCard__top">
                 <p>{repo.name}</p>
               </div>
-              <div className="works__repoCard__under">
+              <div key={repo.id} className="works__repoCard__under">
                 <a
-                  key={repo.id}
                   href={repo.html_url}
                   target="_blank"
                   rel="noreferrer"
-                >Voir sur GitHub
+                >GitHub
+                </a>
+                <a
+                  href={repo.homepage}
+                  target="_blank"
+                  rel="noreferrer"
+                >Homepage
                 </a>
               </div>
             </div>

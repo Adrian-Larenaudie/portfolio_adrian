@@ -15,6 +15,7 @@ const githubRepos = (store) => (next) => (action) => {
           .then((response) => {
             // fetch, filter, store data in the state
             const filteredData = response.data.filter((repo) => repo.stargazers_count > 0);
+            console.log(response);
             store.dispatch(setGithubReposInTheState(filteredData));
           })
           .catch((error) => {

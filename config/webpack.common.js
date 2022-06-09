@@ -25,10 +25,22 @@ module.exports = {
       src: paths.src,
       app: paths.src,
     },
+    fallback: {
+      process: require.resolve("process/browser"),
+      zlib: require.resolve("browserify-zlib"),
+      stream: require.resolve("stream-browserify"),
+      util: require.resolve("util"),
+      buffer: require.resolve("buffer"),
+      assert: require.resolve("assert"),
+    },
   },
   plugins: [
     new webpack.DefinePlugin( {
       "process.env": JSON.stringify(dotenv.parsed)
+    }),
+    new webpack.ProvidePlugin({
+      Buffer: ["buffer", "Buffer"],
+      process: "process/browser",
     }),
     new CleanWebpackPlugin(),
     new CopyWebpackPlugin({
@@ -80,3 +92,4 @@ module.exports = {
     ],
   },
 };
+

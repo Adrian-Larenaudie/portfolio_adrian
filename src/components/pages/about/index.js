@@ -6,8 +6,8 @@ import './styles.scss';
 import './animations.scss';
 import IMG from './CV.jpg';
 
+// eslint-disable-next-line arrow-body-style
 const About = () => {
-  console.log('');
   return (
     <div className="about" id="about">
 
@@ -26,10 +26,7 @@ const About = () => {
 
         <Fade bottom duration={500} delay={200} distance="20%">
           <p className="about__someWordsContainer__text">
-            Après 11 années de travail en restauration,
-            <br />
-            <span>42</span>
-            j'ai débuté, en juillet 2021, une reconversion professionnelle dans le développement web en autodidacte avant d'intégrer l'école O'clock pour une formation intensive à partir de Janvier 2022.
+            En juillet 2021, j'ai débuté une reconversion professionnelle dans le développement web en autodidacte avant d'intégrer l'école O'clock pour une formation intensive à partir de Janvier 2022.
             <br />
             <span>42</span>
             Ce qui à l'origine était un simple projet de reconversion est très vite devenu une passion
@@ -40,7 +37,7 @@ const About = () => {
             du code m'accompagne au quotidien.
             <br />
             <span>42</span>
-            Vous souhaitez me contacter,
+            Si vous souhaitez me contacter,
             <Link className="about__someWordsContainer__link" to="/contact"> c'est par ici.</Link>
           </p>
         </Fade>
@@ -55,7 +52,7 @@ const About = () => {
                 <p className="about__cvCardContainer__cvCard__text">Voir mon CV</p>
               </div>
               <div className="about__cvCardContainer__cvCardBack">
-                <a href="#"><img src={IMG} alt="cv" /></a>
+                <a href="/resume.pdf"><img src={IMG} alt="cv" /></a>
               </div>
             </div>
           </div>

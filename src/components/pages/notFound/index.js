@@ -2,8 +2,8 @@ import { Link } from 'react-router-dom';
 import Fade from 'react-reveal/Fade';
 import './styles.scss';
 
+// eslint-disable-next-line arrow-body-style
 const NotFound = () => {
-  console.log('coucou');
   return (
     <>
       <Fade duration={1000} delay={1000} left distance="20%">

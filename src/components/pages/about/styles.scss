@@ -16,8 +16,9 @@
       font-size: 4rem;
     }
     &__text {
+      line-height: 2rem;
       margin-top: 4rem;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       span {
         display: block;
         visibility: hidden;
@@ -57,6 +58,9 @@
 /* Responsive part */
 @media screen and (max-width: 1440px) {
   .about {
+    .pageBackground {
+      font-size: 15rem;
+    }
     margin-top: 0;
     &__someWordsContainer {
       width: 80%;
