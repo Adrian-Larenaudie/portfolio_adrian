@@ -8,12 +8,6 @@ import './styles.scss';
 import './animations.scss';
 
 const Works = () => {
-  // To dispatch a valid z-index on repoCard element
-  const dispatchZindex = () => {
-    const repoCards = document.querySelectorAll('.works__repoCard__top');
-    console.log(repoCards);
-  };
-
   // store dispatch hook in const (hooks can only be called inside the body of the function)
   const dispatch = useDispatch();
   // get githubRepos value from the state
@@ -26,7 +20,6 @@ const Works = () => {
       // if not fetch data from github API
       dispatch(fetchGithubRepos());
     }
-    dispatchZindex();
   }, []);
 
   // https://www.davidhu.io/react-spinners/ using a spinner to manage loading API
@@ -68,14 +61,16 @@ const Works = () => {
                   href={repo.html_url}
                   target="_blank"
                   rel="noreferrer"
-                >GitHub
+                >Voir sur GitHub
                 </a>
+                {repo.homepage !== '' && repo.homepage !== 'https://adrian-larenaudie.com' && (
                 <a
                   href={repo.homepage}
                   target="_blank"
                   rel="noreferrer"
-                >Homepage
+                >Voir le site
                 </a>
+                )}
               </div>
             </div>
           ))}

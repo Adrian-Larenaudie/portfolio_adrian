@@ -43,6 +43,10 @@
     &:hover {
       transition: $fastTransition;
     }
+    &__under a {
+      text-align: center;
+      margin-bottom: .4rem;
+    }
   }
 }
 

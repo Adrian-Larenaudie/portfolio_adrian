@@ -56,6 +56,7 @@
       }
     }
     &:hover .works__repoCard__under {
+      padding-bottom: 1rem;
       color: $darkGreen;
       border-color: $darkGreen;
       transition: .6s;
@@ -67,6 +68,8 @@
       }
     }
     &:hover .works__repoCard__top {
+      padding-top: 1.8rem;
+      padding-bottom: 3rem;
       color: $darkGreen;
       border-color: $darkGreen;
       transition: .6s;
