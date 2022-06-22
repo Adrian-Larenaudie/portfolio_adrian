@@ -1,6 +1,7 @@
 /* eslint-disable no-param-reassign */
 /* eslint-disable eqeqeq */
 import './styles.scss';
+import { useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import Fade from 'react-reveal/Fade';
 import data from '../../../data/data';
@@ -39,9 +40,18 @@ const Home = () => {
     }
   };
 
+  const playLoopOnTags = true;
+
   useEffect(() => {
-    loopOnTags();
-  }, []);
+  /* document.addEventListener('visibilitychange', (event) => {
+      playLoopOnTags = !playLoopOnTags;
+    }); */
+    if (playLoopOnTags) {
+      loopOnTags();
+    }
+  }, [playLoopOnTags]);
+
+  const currentWord = useSelector((state) => state.currentWord);
 
   return (
     <div className="home" id="home">
@@ -63,6 +73,7 @@ const Home = () => {
       </Fade>
       <Fade duration={500} delay={600} left distance="10%">
         <p className="home__dynamicWords" />
+        <p className="home__dynamicWord">{currentWord}</p>
       </Fade>
     </div>
   );

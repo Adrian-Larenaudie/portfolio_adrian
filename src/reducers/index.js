@@ -1,6 +1,10 @@
 /* eslint-disable no-unneeded-ternary */
 /* eslint-disable no-nested-ternary */
-import { CHANGE_IS_LOADING_GITHUB_DATA, CHANGE_THEME, SET_GITHUB_REPOS_IN_THE_STATE } from '../actions';
+import {
+  CHANGE_IS_LOADING_GITHUB_DATA,
+  CHANGE_THEME,
+  SET_GITHUB_REPOS_IN_THE_STATE,
+} from '../actions';
 
 // This is a reducer, its purpose is to set a initial application state
 // and change its state when actions are played
@@ -10,6 +14,19 @@ export const initialState = {
   isDarkTheme: localStorage.getItem('isThemeDark') != null ? (localStorage.getItem('isThemeDark') === 'false' ? false : true) : true,
   githubRepos: {},
   isLoadingGithubRepos: false,
+  animatedWords: [
+    'rigueur',
+    'dynamisme',
+    'curiosité',
+    'disponibilité',
+    'persévérance',
+    'écoute',
+    'organisation',
+  ],
+  letterIndex: 0,
+  wordIndex: 1,
+  currentWord: '',
+  wordsNumber: 7,
 };
 
 // A switch to know wich action is played and what to do in this action case.

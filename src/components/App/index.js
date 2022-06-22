@@ -1,5 +1,4 @@
 import { useSelector } from 'react-redux';
-import { useEffect } from 'react';
 import { Route, Routes, useLocation } from 'react-router-dom';
 import Nav from '../nav';
 import About from '../pages/about';
@@ -15,48 +14,6 @@ import './styles.scss';
 function App() {
   const isDarkTheme = useSelector((state) => state.isDarkTheme);
   const { pathname: pathName } = useLocation();
-
-  const handleSwipe = () => {
-    let xDown = null;
-    let yDown = null;
-    function getTouches(evt) {
-      return evt.touches;
-    }
-    function handleTouchStart(evt) {
-      const firstTouch = getTouches(evt)[0];
-      xDown = firstTouch.clientX;
-      yDown = firstTouch.clientY;
-    }
-    function handleTouchMove(evt) {
-      if (!xDown || !yDown) {
-        return;
-      }
-      const xUp = evt.touches[0].clientX;
-      const yUp = evt.touches[0].clientY;
-      const xDiff = xDown - xUp;
-      const yDiff = yDown - yUp;
-      if (Math.abs(xDiff) > Math.abs(yDiff)) {
-      /* most significant */
-        if (xDiff > 0) {
-        /* right swipe */
-          // console.log('right swipe');
-        }
-        else {
-        /* left swipe */
-          // console.log('left swipe');
-        }
-      }
-      /* reset values */
-      xDown = null;
-      yDown = null;
-    }
-    document.addEventListener('touchstart', handleTouchStart, false);
-    document.addEventListener('touchmove', handleTouchMove, false);
-  };
-
-  useEffect(() => {
-    handleSwipe();
-  }, []);
 
   return (
     <div className={isDarkTheme ? 'app' : 'app--light'}>
