@@ -61,7 +61,7 @@ const Contact = () => {
           <a className="contact__nav__social" href="https://github.com/Adrian-Larenaudie" target="_blank" rel="noreferrer">
             <GitHubLogo />
           </a>
-          <a className="contact__nav__social" href="https://www.linkedin.com/in/adrian-larenaudie-a82b8b238/" target="_blank" rel="noreferrer">
+          <a className="contact__nav__social" href="https://www.linkedin.com/in/adrian-larenaudie/" target="_blank" rel="noreferrer">
             <LinkedinLogo />
           </a>
         </nav>
