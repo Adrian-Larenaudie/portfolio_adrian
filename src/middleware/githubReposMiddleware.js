@@ -14,7 +14,8 @@ const githubRepos = (store) => (next) => (action) => {
           .get('https://api.github.com/users/adrian-larenaudie/repos?')
           .then((response) => {
             // fetch, filter, store data in the state
-            const filteredData = response.data.filter((repo) => repo.stargazers_count > 0);
+            console.log(response);
+            const filteredData = response.data.filter((repo) => repo.description !== null && repo.description.includes('PortfolioPresence.'));
             store.dispatch(setGithubReposInTheState(filteredData));
           })
           .catch((error) => {
