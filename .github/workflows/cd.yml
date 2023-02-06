@@ -1,0 +1,34 @@
+name: Deploy to surge
+
+on:
+  push:
+    branches:
+      - main # Lorsqu'un push advient sur master, on lance le workflow
+
+jobs:
+  build-deploy: 
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+  
+    # Récupère le code du dépôt Github dans l'environnement du runner
+    - name: Checkout
+      uses: actions/checkout@v3
+
+    # Installe Node.js version 18
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18
+        cache: 'npm'
+
+    # Build the backend
+    - name: Build
+      run: |
+        yarn
+        yarn build
+    # Deploy to surge
+    - name: Deploy
+      run: | 
+        npm install --global surge
+        surge  ./dist --domain ${{ vars.SURGE_DEPLOY_URL }} --token ${{ secrets.SURGE_TOKEN }}

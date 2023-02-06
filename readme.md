@@ -1,6 +1,6 @@
 **Quick description**
 
-This is my portfolio, a frontend react application to expose my works and my profile
+This is my portfolio web site
 
 ### Technos and ressources:
 - starting the project with a react model including react, webpack and babel
